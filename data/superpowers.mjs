@@ -1,28 +1,31 @@
-// The 12 superpowers of Onos Q. One intelligence — every entry is "Q does X".
+// The 12 superpowers of Onos Q. Copy source: ONOS_MASTER_COPY.md (operating-system positioning).
+// related: [slug, contextual one-liner shown on the referring page]
 export const SUPERPOWERS = [
   {
     slug: 'briefings', n: '01', color: 'c-onos', icon: '☀️',
     short: 'Q briefs your team',
     title: 'Q briefs your team',
     headline: 'Start every day already ahead.',
-    tagline: 'Daily intelligence briefings',
-    card: 'Before your first coffee, Q has read overnight observations, open actions and site activity — and delivered a sharp, prioritised briefing to every project lead.',
-    heroSub: 'Every morning, Q reads everything that happened across your sites overnight — observations, incidents, sign-ins, weather, expiring permits — and delivers each project lead a briefing that says exactly what needs their attention today.',
+    tagline: 'Daily operational briefings',
+    meta: 'Q briefs your team by reading overnight records across the Onos operating system — observations, actions, incidents, sign-ins, permits and contractor changes.',
+    card: 'Before the first shift starts, Q has read overnight observations, open actions, sign-ins, incidents, expiring permits and site activity — then delivered a prioritised briefing to every lead.',
+    indexBlurb: 'Reads overnight observations, actions, incidents, sign-ins, permits and contractor changes, then tells each lead what needs attention.',
+    heroSub: 'Every morning, Q reads the operating record across your sites — observations, incidents, actions, sign-ins, permits, contractor changes, training gaps and documents — then delivers each lead the few things that need attention today.',
     useCase: {
       title: 'The first hour of the day, given back',
-      problem: 'Most safety leads start the day blind: twenty browser tabs, a dozen unread emails, and a gut feeling about which site needs them most. By the time they’ve pieced the picture together, the morning is gone — and so is the chance to get ahead of the day’s risk.',
-      solution: 'Q does the piecing-together for them. It reads every record logged since yesterday’s briefing, weighs what matters against what doesn’t, and delivers a prioritised digest before the first worker signs in. Not a data dump — a judgement call: here are the three things that need you today, and here’s why.'
+      problem: 'Most leads start the day assembling the picture: dashboards, emails, spreadsheets, sign-in records, action trackers and gut feel. By the time they know where attention belongs, the work has already moved.',
+      solution: 'Q assembles the picture before the day starts. It reads every relevant record, separates signal from noise and briefs the right person with what matters, why it matters and where the evidence sits.'
     },
     how: [
-      ['Q reads overnight', 'Every observation, incident, action update, sign-in anomaly and document change across all your sites — processed before 6am.'],
-      ['Q prioritises', 'Signals are ranked by risk, urgency and relevance to each recipient. A site manager and an EHSQ director get different briefings from the same data.'],
-      ['Q delivers', 'Each lead gets their briefing by email or in-app — readable in two minutes, with one-tap links into the underlying records.'],
-      ['You act', 'The overdue scaffold inspection gets done at 7am instead of being discovered at 4pm. That’s the whole point.']
+      ['Q reads overnight', 'Every observation, incident, action update, sign-in anomaly, permit expiry and document change across your sites.'],
+      ['Q prioritises', 'Signals ranked by risk, urgency and relevance. Site managers and directors get different briefings from the same operating record.'],
+      ['Q delivers', 'Email or in-app briefings readable in minutes, with one-tap links into source records.'],
+      ['You act', 'The overdue scaffold inspection gets handled at 7am, not discovered at 4pm.']
     ],
     benefits: [
-      ['⏱', 'An hour back, every morning', 'No more spreadsheet archaeology before the day starts. The picture is assembled for you.'],
-      ['🎯', 'Nothing slips through', 'Q never skims, never gets distracted, never misses page two. If it’s in the data, it’s been read.'],
-      ['📨', 'Right detail, right person', 'Site leads get site detail. Directors get the portfolio view. Everyone gets only what they can act on.']
+      ['⏱', 'An hour back, every morning', 'No more spreadsheet archaeology before the day starts.'],
+      ['🎯', 'Nothing slips through', 'Q reads the records nobody has time to check manually.'],
+      ['📨', 'Right detail, right person', 'Each lead sees what they can act on — not a data dump.']
     ],
     stats: [['2', ' min', 'to read your morning briefing'], ['100', '%', 'of overnight records reviewed'], ['6', 'am', 'delivered before the day begins']],
     feed: [
@@ -31,106 +34,133 @@ export const SUPERPOWERS = [
       ['warn', '⚠', 'Permit PTW-118 expires 09:00 today'],
       ['ok', '✓', '23 briefings delivered, tailored per lead']
     ],
-    related: ['risk-scoring', 'pattern-detection', 'board-reporting']
+    related: [
+      ['risk-scoring', 'Combines module signals to show rising project risk before it becomes an incident.'],
+      ['pattern-detection', 'Connects weak signals across sites, shifts and contractors.'],
+      ['board-reporting', 'Turns the month’s operating record into a board-ready story.']
+    ],
+    cta: ['See Q brief your team<br><span class="grad-text">from your own data.</span>', 'Bring real records to a live demo and watch this intelligence go to work.']
   },
   {
     slug: 'risk-scoring', n: '02', color: 'c-pink', icon: '🎯',
     short: 'Q scores your risk',
     title: 'Q scores your risk',
     headline: 'See risk rising before it arrives.',
-    tagline: 'Live Project Risk Scores',
-    card: 'Q continuously scores every project on live signals — overdue actions, incident velocity, inspection gaps — so leadership sees rising risk before it becomes a RIDDOR report.',
-    heroSub: 'Q maintains a live risk score for every project, recalculated as the data changes — so the question "which site should worry me?" always has a current, evidenced answer.',
+    tagline: 'Live project risk scores',
+    meta: 'Q scores live project risk using signals from across Onos — observations, actions, incidents, audits, permits, training, assets and supply chain records.',
+    card: 'Q combines live signals from observations, incidents, audits, actions, permits, training and supply chain records to show which projects are getting riskier — and why.',
+    indexBlurb: 'Combines signals across modules to show which sites, projects or operations are becoming riskier.',
+    heroSub: 'Q maintains a live risk score for every project, site or operation — recalculated as observations, incidents, audits, actions, permits, training and contractor records change.',
     useCase: {
       title: 'From quarterly hindsight to live foresight',
-      problem: 'Risk reviews happen quarterly; risk doesn’t. Between reviews, a project can quietly accumulate overdue actions, slipping inspections and a rising near-miss count — and nobody connects the dots until the incident report writes them up in hindsight.',
-      solution: 'Q connects the dots continuously. Every project carries a live risk score built from the signals that actually precede harm: action backlog, incident velocity, inspection coverage, observation trends, subcontractor compliance. When a score moves, the right person knows the same day — with the evidence one click away.'
+      problem: 'Risk reviews happen quarterly; risk moves daily. A project can accumulate overdue actions, slipping inspections, near-miss clusters and contractor gaps long before the incident makes the trend obvious.',
+      solution: 'Q connects those signals continuously. Because the data lives in one operating system, Q can explain what moved, why it moved and what evidence sits underneath the score.'
     },
     how: [
-      ['Q watches the signals', 'Overdue actions, incident frequency and severity, inspection gaps, observation sentiment, supply chain compliance — weighted and combined per project.'],
-      ['Q recalculates continuously', 'Scores update as data changes, not on a reporting cycle. A bad week shows up as a bad week — not as a footnote three months later.'],
-      ['Q explains itself', 'Every score decomposes into its drivers. "Riverside is at 78" comes with "because actions are 40% overdue and near-misses doubled."'],
-      ['Q escalates movement', 'Rising scores trigger alerts to the accountable owner and EHSQ leadership. Falling scores prove your interventions worked.']
+      ['Q watches the signals', 'Actions, incidents, observations, audits, permits, training, assets, environmental data and contractor status.'],
+      ['Q recalculates continuously', 'Scores update as records change, not on a reporting cycle.'],
+      ['Q explains itself', 'Every score decomposes into its drivers, source records and trend movement.'],
+      ['Q escalates movement', 'Rising scores trigger alerts to accountable owners and leadership.']
     ],
     benefits: [
-      ['📈', 'Leading, not lagging', 'Manage the conditions that precede incidents instead of counting the incidents themselves.'],
-      ['🧭', 'Effort goes where risk is', 'Deploy your scarce EHSQ time against the projects that need it this week — with evidence, not instinct.'],
-      ['🏛', 'Board-grade answers', 'When the board asks "where’s our biggest exposure?", you answer in seconds with a defensible, data-backed score.']
+      ['📈', 'Leading, not lagging', 'Manage the conditions that precede incidents instead of counting incidents afterwards.'],
+      ['🧭', 'Effort goes where risk is', 'Deploy EHSQ time against the sites that need it this week.'],
+      ['🏛', 'Board-grade answers', 'When the board asks where exposure is rising, the answer is ready and evidenced.']
     ],
-    stats: [['24', '/7', 'continuous recalculation'], ['100', '%', 'of projects scored, always'], ['1', ' click', 'from score to evidence']],
+    stats: [['24', '/7', 'continuous recalculation'], ['100', '%', 'projects scored, always'], ['1', ' click', 'from score to evidence']],
     feed: [
       ['info', 'PRS', 'Recalculating 14 project scores…'],
       ['warn', '⚠', 'Riverside Depot: 64 → 78 (rising)'],
       ['info', '↳', 'Drivers: overdue actions +40%, near-misses ×2'],
       ['ok', '✓', 'Escalated to EHSQ Director']
     ],
-    related: ['briefings', 'pattern-detection', 'action-chasing']
+    related: [
+      ['briefings', 'Turns live risk movement into daily action.'],
+      ['pattern-detection', 'Finds the weak signals behind score movement.'],
+      ['action-chasing', 'Stops known risks sitting open.']
+    ],
+    cta: ['See Q score your risk<br><span class="grad-text">on your own data.</span>', 'Bring live project records to a demo and watch the score build from the evidence.']
   },
   {
     slug: 'pattern-detection', n: '03', color: 'c-cyan', icon: '🔍',
     short: 'Q spots the patterns',
     title: 'Q spots the patterns',
     headline: 'The weak signals, finally heard.',
-    tagline: 'Observation pattern detection',
-    card: 'Q reads every safety observation across every site and connects the dots humans can’t — surfacing clusters, trends and the weak signals that precede serious harm.',
-    heroSub: 'Your workforce already reports the warning signs — hundreds of observations a month. Q is the intelligence that actually reads all of them, across every site, and tells you what they mean together.',
+    tagline: 'Pattern detection',
+    eyebrowOverride: 'Observation and operating-pattern detection',
+    meta: 'Q spots patterns across observations, incidents, audits, actions, shifts, sites and contractors by reading the full Onos operating record.',
+    card: 'Q reads every observation, incident and inspection finding across sites, shifts, trades and contractors — surfacing clusters no single team could see alone.',
+    indexBlurb: 'Connects observations, incidents and findings across sites, shifts, trades, contractors and time.',
+    heroSub: 'Your workforce already reports the warning signs. Q reads them across the full operating system — observations, incidents, audits, actions, sites, shifts, contractors and time — and tells you what they mean together.',
     useCase: {
-      title: 'Four hundred percent more observations is only valuable if someone reads them',
-      problem: 'Onos customers capture 400% more observations than they did on paper. That’s a goldmine — and a problem. No human can read twelve hundred observations a month across fourteen sites and hold the cross-site picture in their head. So the cluster of manual-handling reports on night shift stays invisible until it becomes an injury statistic.',
-      solution: 'Q reads every single one. It groups related reports across sites, shifts, trades and time — and surfaces the clusters a human reviewer would never see from inside one site. Three unrelated-looking observations become one clear warning, delivered to the person who can act on it.'
+      title: 'More observations only help if someone reads them',
+      problem: 'Capturing more reports is progress. Reading them all is the problem. No human can hold every observation, incident, audit finding and action across every site in their head.',
+      solution: 'Q can. It groups related records across sites, shifts, trades, contractors and time — then routes the warning to the person who can act.'
     },
     how: [
-      ['Q reads everything', 'Every observation — typed, dictated, photographed — across all sites and subcontractors, in any language your workforce reports in.'],
-      ['Q connects across silos', 'Patterns rarely respect site boundaries. Q correlates by hazard type, location, trade, shift, weather and time to find what repeats.'],
-      ['Q separates signal from noise', 'One report is an anecdote. Q tells you when it’s become a trend — and how confident it is.'],
-      ['Q routes the warning', 'Pattern reports go to the supervisor or safety manager who owns the affected work, with every source observation attached.']
+      ['Q reads everything', 'Typed, dictated, photographed and submitted records across modules and sites.'],
+      ['Q connects across silos', 'Patterns rarely respect site boundaries. Q correlates by hazard type, location, trade, contractor, shift and time.'],
+      ['Q separates signal from noise', 'One report is an anecdote. Q tells you when it has become a trend.'],
+      ['Q routes the warning', 'Pattern reports include the source records and the recommended owner.']
     ],
     benefits: [
-      ['🛡', 'Prevent, don’t investigate', 'Act on the precursors. The incident that never happens is the cheapest one you’ll ever manage.'],
-      ['🔁', 'Reporting becomes worth it', 'When workers see their observations turn into action, they report more. Q closes the cultural loop.'],
-      ['🌐', 'Whole-estate vision', 'Patterns that span sites, regions and subcontractors — visible to no single human — are Q’s home turf.']
+      ['🛡', 'Prevent, do not investigate', 'Act on the precursors while they are still cheap and quiet to fix.'],
+      ['🔁', 'Reporting becomes worth it', 'Workers see reports become action, so they report more.'],
+      ['🌐', 'Whole-estate vision', 'Patterns across sites and contractors become visible.']
     ],
-    stats: [['1284', '', 'observations read in a typical month'], ['100', '%', 'of reports analysed — not sampled'], ['0', '', 'weak signals left unread']],
+    stats: [['1284', '', 'observations read in a typical month'], ['100', '%', 'reports analysed — not sampled'], ['0', '', 'weak signals left unread']],
     feed: [
       ['info', 'scan', '1,284 observations analysed'],
       ['warn', '⚠', 'Cluster: manual handling, night shift, 3 sites'],
       ['info', '↳', 'Confidence: high — 11 reports, 19 days'],
       ['ok', '✓', 'Pattern report → Safety Manager']
     ],
-    related: ['risk-scoring', 'briefings', 'incident-triage']
+    related: [
+      ['risk-scoring', 'Turns patterns into risk movement.'],
+      ['briefings', 'Routes the warning into the day.'],
+      ['incident-triage', 'Links incidents back to the patterns that preceded them.']
+    ],
+    cta: ['See Q spot patterns<br><span class="grad-text">in your own data.</span>', 'Bring a month of observations and actions. Watch Q find what was hidden in plain sight.']
   },
   {
     slug: 'rams-review', n: '04', color: 'c-blue', icon: '📋',
     short: 'Q reviews your RAMS',
     title: 'Q reviews your RAMS',
     headline: 'Method statements, marked in minutes.',
-    tagline: 'RAMS & document review',
-    card: 'Q assesses risk assessments and method statements in minutes, not days — flagging missing controls, generic copy-paste and gaps against the actual scope of work.',
-    heroSub: 'Every RAMS that arrives gets a rigorous first review from Q within minutes — missing controls flagged, copy-paste boilerplate caught, gaps against the actual scope of work identified — before a human reviewer spends a single minute on it.',
+    tagline: 'RAMS and document review',
+    meta: 'Q reviews RAMS and method statements against site, task, contractor, hazards and controls using the wider Onos operating record.',
+    card: 'Q reviews risk assessments, method statements and supporting documents against the actual task, site, contractor and controls — flagging missing detail before work starts.',
+    indexBlurb: 'Checks documents against scope, site, hazards, controls, contractor status and operational context.',
+    heroSub: 'Every RAMS that arrives gets a structured first review from Q — checked against the task, site, contractor, hazards, controls and related records before a human reviewer opens page one.',
     useCase: {
       title: 'The bottleneck that holds up every start date',
-      problem: 'A subcontractor’s RAMS lands on Thursday. The works start Monday. Somewhere in between, an overloaded safety advisor must find time to read forty pages — and under that pressure, reviews become skims. Generic documents recycled from the last job slip through, and the missing rescue plan is discovered at the work face.',
-      solution: 'Q reviews every document the moment it arrives. It checks the controls against the actual scope and hazards of the task, flags boilerplate that doesn’t match the work, and returns a structured review in minutes. Your competent person still makes the final call — but they start from Q’s marked-up copy, not from page one.'
+      problem: 'A subcontractor’s RAMS lands late. The work starts soon. Under pressure, reviews become skims and generic documents slip through.',
+      solution: 'Q reviews every document on arrival. It checks whether controls are specific, adequate and aligned to the actual work. Your competent person still decides — but starts from a marked-up review, not a blank read.'
     },
     how: [
-      ['Document arrives', 'A subcontractor uploads their RAMS through the supply chain portal — no email attachments, no version chaos.'],
-      ['Q reviews against scope', 'Q checks the method against the actual task, location and hazards: are the right controls present, specific and adequate?'],
-      ['Q flags the gaps', 'Missing rescue plans, generic copy-paste, controls that contradict the method, hazards with no mitigation — each flagged with its location in the document.'],
-      ['Your expert decides', 'The human reviewer gets Q’s structured findings and approves, rejects or requests changes — in a fraction of the time, with better consistency.']
+      ['Document arrives', 'A subcontractor uploads RAMS through the controlled workflow.'],
+      ['Q reviews against scope', 'Q checks the method against the task, site, contractor and hazards.'],
+      ['Q flags the gaps', 'Missing rescue plans, wrong substances, generic controls, contradictions and missing evidence.'],
+      ['Your expert decides', 'The reviewer approves, rejects or requests changes with Q’s findings attached.']
     ],
     benefits: [
-      ['⚡', 'Days become minutes', 'First-pass review in under five minutes means start dates stop slipping on paperwork.'],
-      ['🔬', 'Every page, every time', 'Q reads page 37 as carefully as page 1. Review quality stops depending on the reviewer’s workload.'],
-      ['📐', 'A consistent bar', 'Every subcontractor is held to the same standard — and learns quickly that generic RAMS won’t get through.']
+      ['⚡', 'Days become minutes', 'First-pass review no longer blocks the start date.'],
+      ['🔬', 'Every page, every time', 'Q does not skim page 37.'],
+      ['📐', 'A consistent bar', 'Generic RAMS get caught consistently.']
     ],
-    stats: [['4', ' min', 'typical first-pass review'], ['100', '%', 'of pages actually read'], ['0', '', 'rescue plans missed']],
+    stats: [['4', ' min', 'typical first-pass review'], ['100', '%', 'pages actually read'], ['0', '', 'rescue plans missed']],
     feed: [
       ['info', 'doc', 'RAMS-0412 received from subcontractor'],
       ['warn', '⚠', 'No rescue plan for work at height (p.12)'],
       ['warn', '⚠', 'COSHH section generic — wrong substances'],
       ['ok', '✓', 'Structured review returned in 4 minutes']
     ],
-    related: ['supply-chain', 'compliance', 'risk-scoring']
+    related: [
+      ['supply-chain', 'Checks contractor status before work proceeds.'],
+      ['compliance', 'Turns reviewed documents into traceable evidence.'],
+      ['risk-scoring', 'RAMS gaps feed the wider project risk picture.']
+    ],
+    cta: ['See Q review your RAMS<br><span class="grad-text">on a real document.</span>', 'Bring a real RAMS to the demo. No slideware — Q will mark it live.']
   },
   {
     slug: 'supply-chain', n: '05', color: 'c-teal', icon: '🔗',
@@ -138,155 +168,190 @@ export const SUPERPOWERS = [
     title: 'Q guards your supply chain',
     headline: 'Every contractor, always current.',
     tagline: 'Supply chain compliance',
-    card: 'Q tracks every subcontractor’s insurances, accreditations and competencies — chasing expiries automatically so non-compliant contractors never reach your gates.',
-    heroSub: 'Q maintains a live compliance picture of every subcontractor — insurances, accreditations, competencies, RAMS status — and does the chasing itself, so the gate never has to be the place you find out.',
+    eyebrowOverride: 'Supply chain compliance',
+    meta: 'Q monitors contractor compliance across insurances, accreditations, competencies, RAMS, training and site access in the Onos operating system.',
+    card: 'Q watches contractor compliance, insurances, accreditations, RAMS status and competencies — chasing gaps automatically before they become site access problems.',
+    indexBlurb: 'Watches contractor documents, insurances, accreditations, RAMS and competencies.',
+    heroSub: 'Q maintains a live compliance picture of every contractor — documents, insurances, accreditations, competencies, RAMS, performance and site access — then chases gaps before they reach the gate.',
     useCase: {
-      title: 'Your risk profile is only as good as your weakest subcontractor',
-      problem: 'Forty percent of observations on Onos come from supply chain workers — and so does a disproportionate share of risk. Keeping eighty subcontractors’ insurance certificates, CSCS cards and accreditations current is a full-time chasing job that always slips, until the day an uninsured contractor is found mid-job.',
-      solution: 'Q owns the chasing. It watches every expiry date across your whole supply chain, requests renewals automatically with escalating reminders, verifies what comes back, and keeps a live red-amber-green picture per contractor. Procurement and site teams see compliance status before award and before access — not after the fact.'
+      title: 'Your risk profile is only as strong as your weakest contractor record',
+      problem: 'Keeping contractor evidence current is a full-time chase. It slips until procurement, the gate, the permit desk or the incident exposes the gap.',
+      solution: 'Q owns the chase. It watches expiry dates, requests renewals, checks what returns and updates contractor status across procurement, RAMS, sign-in and permits.'
     },
     how: [
-      ['Q tracks every credential', 'Insurances, accreditations, licences, training cards and RAMS status for every subcontractor, in one live register.'],
-      ['Q chases ahead of expiry', 'Renewal requests go out 30, 14 and 7 days ahead — automatically, politely, persistently. No human nagging required.'],
-      ['Q verifies what returns', 'New certificates are checked for dates, cover levels and scope before the status turns green.'],
-      ['Q gates access', 'Site sign-in and permit issue see the live status. Non-compliant contractors are flagged before they reach the work front.']
+      ['Q tracks every credential', 'Insurance, accreditations, licences, tickets, RAMS and required policies.'],
+      ['Q chases ahead of expiry', 'Requests and reminders go out automatically.'],
+      ['Q verifies what returns', 'Dates, cover levels, scope and missing information checked before status changes.'],
+      ['Q gates access', 'Live status informs procurement, sign-in and permit issue.']
     ],
     benefits: [
-      ['🚫', 'No more gate surprises', 'The uninsured contractor is caught at procurement, not mid-incident when it’s a claim.'],
-      ['🗂', 'The chasing does itself', 'Hours of weekly admin replaced by automated, audited follow-up that never forgets.'],
-      ['🤝', 'Stronger tender story', 'Demonstrable, real-time supply chain governance is a competitive answer to any client PQQ.']
+      ['🚫', 'No more gate surprises', 'Non-compliance is caught before access or work.'],
+      ['🗂', 'The chasing does itself', 'Admin turns into audited follow-up.'],
+      ['🤝', 'Stronger tender story', 'Real-time supply chain governance becomes a client-ready answer.']
     ],
-    stats: [['86', '', 'subcontractors verified continuously'], ['30', ' days', 'of advance warning on every expiry'], ['0', '', 'non-compliant contractors at the gate']],
+    stats: [['86', '', 'subcontractors verified continuously'], ['30', ' days', 'advance warning on every expiry'], ['0', '', 'non-compliant contractors at the gate']],
     feed: [
       ['info', 'check', '86 subcontractors verified'],
       ['warn', '⚠', '3 insurance certificates expire in 14d'],
       ['ok', '✓', 'Renewal requests sent + diarised'],
       ['ok', '✓', 'Gate status updated for Site 3']
     ],
-    related: ['rams-review', 'competency', 'compliance']
+    related: [
+      ['rams-review', 'Checks contractor documents before work starts.'],
+      ['competency', 'Links contractor people to the tickets required.'],
+      ['compliance', 'Turns live contractor records into evidence.']
+    ],
+    cta: ['See Q guard your supply chain<br><span class="grad-text">on your contractor data.</span>', 'Bring a contractor tracker and we will show the live compliance loop.']
   },
   {
     slug: 'incident-triage', n: '06', color: 'c-onos', icon: '⚡',
     short: 'Q triages incidents',
     title: 'Q triages incidents',
     headline: 'The first hour, handled right.',
-    tagline: 'Incident triage & investigation support',
-    card: 'The moment an incident is logged, Q drafts the investigation structure, suggests root-cause lines of enquiry and checks RIDDOR reportability — so nothing is missed under pressure.',
-    heroSub: 'The minutes after an incident are when the most matters and the least capacity exists. Q handles the structure — reportability, notifications, evidence checklist, investigation scaffold — so your people can handle the people.',
+    tagline: 'Incident triage',
+    eyebrowOverride: 'Incident triage and investigation support',
+    meta: 'Q triages incidents by reading report details alongside prior observations, actions, training, contractors and site records.',
+    card: 'When an incident is logged, Q structures the response: RIDDOR reportability, evidence checklist, investigation prompts, notifications and actions — ready for human review.',
+    indexBlurb: 'Assesses reportability, drafts the evidence checklist and scaffolds the investigation.',
+    heroSub: 'The minutes after an incident are when the process matters most and capacity is lowest. Q handles structure — reportability, evidence checklist, investigation scaffold, related records and actions — so your people can handle the people.',
     useCase: {
       title: 'Nobody does their best paperwork in the worst hour',
-      problem: 'An incident just happened. The site manager is managing casualties, the safety advisor is driving over, and somewhere in that chaos someone must remember: is this RIDDOR-reportable? Who must be notified, by when? What evidence needs capturing before the scene changes? Under pressure, checklists live in heads — and heads are busy.',
-      solution: 'The moment the incident is logged, Q goes to work. It assesses RIDDOR reportability against the actual injury and circumstances, drafts the statutory notification timeline, generates an evidence checklist for the scene, and scaffolds the investigation with suggested root-cause lines of enquiry. The humans stay with the humans; Q keeps the process whole.'
+      problem: 'In the first hour, someone must remember reportability, notifications, evidence, witness details, scene preservation and actions. Under pressure, checklists live in heads — and heads are busy.',
+      solution: 'Q goes to work when the incident is logged. It structures the response, reads related records and gives the investigation a defensible starting point.'
     },
     how: [
-      ['Incident logged', 'A 60-second mobile report from site — what happened, who, where, photos.'],
-      ['Q assesses reportability', 'Specified injuries, over-7-day criteria, dangerous occurrences — checked against the actual details, with the reasoning shown.'],
-      ['Q drafts the response', 'Notification deadlines, evidence checklist, witness list, scene-preservation prompts — generated and assigned in minutes.'],
-      ['Q scaffolds the investigation', 'A structured investigation pack with suggested lines of enquiry, linked to similar past incidents and relevant patterns Q has seen.']
+      ['Incident logged', 'A fast mobile report from site with people, place, photos and details.'],
+      ['Q assesses reportability', 'Specified injuries, over-7-day criteria and dangerous occurrences checked with reasoning shown.'],
+      ['Q drafts the response', 'Deadlines, evidence checklist, witness list and scene prompts generated.'],
+      ['Q adds context', 'Similar incidents, prior observations, open actions, training gaps and contractor history surfaced.']
     ],
     benefits: [
-      ['🧯', 'Calm process under pressure', 'The statutory clock never gets forgotten, no matter how chaotic the day.'],
-      ['⚖️', 'Defensible from minute one', 'Evidence captured early and systematically — the difference between a clean investigation and a contested one.'],
-      ['🔎', 'Deeper root causes', 'Q links the incident to prior observations and patterns, so investigations start with context, not a blank page.']
+      ['🧯', 'Calm process under pressure', 'The statutory clock does not rely on memory.'],
+      ['⚖️', 'Defensible from minute one', 'Evidence is captured early and systematically.'],
+      ['🔎', 'Deeper root causes', 'Investigations start with context, not a blank page.']
     ],
-    stats: [['60', 's', 'to log an incident from site'], ['10', ' days', 'RIDDOR deadline never missed'], ['100', '%', 'of incidents get a structured pack']],
+    stats: [['60', 's', 'to log an incident from site'], ['10', ' days', 'RIDDOR deadline never missed'], ['100', '%', 'incidents get a structured pack']],
     feed: [
       ['info', 'new', 'Incident INC-2291 logged 14:32'],
       ['warn', '⚠', 'Potential RIDDOR — specified injury'],
       ['info', '↳', 'F2508 deadline: 10 days. Clock started.'],
       ['ok', '✓', 'Investigation pack drafted + assigned']
     ],
-    related: ['pattern-detection', 'risk-scoring', 'briefings']
+    related: [
+      ['pattern-detection', 'Links the incident to earlier weak signals.'],
+      ['risk-scoring', 'Updates the live risk picture.'],
+      ['briefings', 'Routes next steps into tomorrow’s priorities.']
+    ],
+    cta: ['See Q triage incidents<br><span class="grad-text">with your workflow.</span>', 'Bring a real incident form or anonymised event and we will show the investigation scaffold.']
   },
   {
     slug: 'compliance', n: '07', color: 'c-cyan', icon: '🛡️',
     short: 'Q keeps you audit-ready',
     title: 'Q keeps you audit-ready',
     headline: 'Permanently ready. Never scrambling.',
-    tagline: 'ISO compliance mapping',
-    card: 'Q maps your live data against ISO 45001, 14001 and 9001 — keeping you permanently audit-ready instead of scrambling the week before the certification body arrives.',
-    heroSub: 'Q continuously maps your live operational data against ISO 45001, 14001 and 9001 clause by clause — so audit-readiness is a permanent state, not an annual emergency.',
+    tagline: 'Compliance mapping',
+    eyebrowOverride: 'ISO compliance mapping',
+    meta: 'Q maps live Onos records against ISO 45001, 14001 and 9001 to keep audit evidence current across the EHSQ operating system.',
+    card: 'Q maps live operational evidence against ISO 45001, 14001 and 9001 — so audit-readiness stops being a project and becomes a property of the system.',
+    indexBlurb: 'Maps live records against ISO 45001, 14001 and 9001 clause by clause.',
+    heroSub: 'Q maps live operational records against ISO 45001, 14001 and 9001 clause by clause — so audit-readiness becomes a state of the system, not a seasonal panic.',
     useCase: {
       title: 'The two worst weeks of the year, deleted',
-      problem: 'Every certification cycle, the same ritual: weeks of evidence-hunting through folders, chasing records that should exist, and discovering gaps when it’s too late to close them gracefully. The audit becomes a performance — and the real compliance posture stays unknown the other fifty weeks of the year.',
-      solution: 'Q treats every day like audit day. It maps the records your teams already create — inspections, training, actions, reviews — against each clause of the standards you hold, maintains a live coverage score, and flags gaps while there’s still time to fix them properly. When the certification body arrives, the evidence pack already exists.'
+      problem: 'Audit prep should not mean hunting through folders for evidence that may or may not exist. Every inspection, training record, action, document, risk review and incident already says something about your management system.',
+      solution: 'Q maps those records continuously. Gaps surface early, evidence packs stay current and leadership sees the real posture before the auditor does.'
     },
     how: [
-      ['Q knows your standards', 'ISO 45001, 14001, 9001 — the clause structure, what evidence satisfies each, and how your management system maps onto them.'],
-      ['Q maps continuously', 'Every record created in Onos is indexed against the clauses it evidences. Coverage updates daily, not annually.'],
-      ['Q flags gaps early', 'Four missing training records against clause 7.2 is a Tuesday fix in March — not a finding in November.'],
-      ['Q assembles the pack', 'Come audit day, the evidence pack per clause is generated, current and traceable to source records.']
+      ['Q knows your standards', 'ISO 45001, 14001 and 9001 clause structures and evidence expectations.'],
+      ['Q maps continuously', 'Records created in Onos are indexed against the clauses they evidence.'],
+      ['Q flags gaps early', 'Missing evidence becomes a manageable action, not a finding.'],
+      ['Q assembles the pack', 'Evidence packs generate current and traceable to source records.']
     ],
     benefits: [
-      ['📅', 'Audit prep ≈ zero', 'The weeks of evidence-hunting simply stop existing. The pack is always current.'],
-      ['🩺', 'True posture, always known', 'Leadership sees real compliance coverage every day — not a once-a-year snapshot staged for the auditor.'],
-      ['🏅', 'Findings before the auditor finds them', 'Gaps surface internally first, while they’re cheap and quiet to fix.']
+      ['📅', 'Audit prep approaches zero', 'The pack exists because the work was done in the system.'],
+      ['🩺', 'True posture, always known', 'Leadership sees coverage every day.'],
+      ['🏅', 'Findings before the auditor finds them', 'Gaps surface internally while they are cheap to fix.']
     ],
-    stats: [['96', '%', 'live clause coverage, visible daily'], ['3', '', 'standards mapped: 45001 · 14001 · 9001'], ['0', ' wks', 'of audit-prep scramble']],
+    stats: [['96', '%', 'live clause coverage, visible daily'], ['3', '', 'standards mapped: 45001 · 14001 · 9001'], ['0', ' wks', 'audit-prep scramble removed']],
     feed: [
       ['info', 'audit', 'ISO 45001 clause coverage: 96%'],
       ['warn', '⚠', 'Clause 7.2: 4 training records missing'],
       ['ok', '✓', 'Gap actions raised + assigned'],
       ['ok', '✓', 'Evidence pack regenerated']
     ],
-    related: ['competency', 'supply-chain', 'board-reporting']
+    related: [
+      ['competency', 'Training records feed clause evidence.'],
+      ['supply-chain', 'Contractor records stay evidence-ready.'],
+      ['board-reporting', 'Compliance posture becomes board-ready.']
+    ],
+    cta: ['See Q keep you audit-ready<br><span class="grad-text">with your standards.</span>', 'Bring an audit checklist or clause map. We will show how Onos turns live work into evidence.']
   },
   {
     slug: 'ask-q', n: '08', color: 'c-blue', icon: '💬',
     short: 'Q answers anything',
     title: 'Q answers anything',
     headline: 'Ask in English. Answered with evidence.',
-    tagline: 'Conversational answers from your data',
-    card: 'Ask Q a question in plain English — "which sites had the most near-misses last month?" — and get an instant answer drawn from your own live data, with the evidence to back it.',
-    heroSub: 'No query builder, no report request, no waiting for the data team. Ask Q the question the way you’d ask a colleague — and get the answer from your own live data, with every source record linked.',
+    tagline: 'Conversational answers',
+    eyebrowOverride: 'Conversational answers from your data',
+    meta: 'Ask Q plain-English questions across the Onos operating system and get answers from live EHSQ data with source evidence linked.',
+    card: 'Ask plain-English questions across your EHSQ operating system — from open risks to contractor status to incident trends — and get answers linked to the evidence.',
+    indexBlurb: 'Answers questions from your own live data, with source records linked.',
+    heroSub: 'No query builder, no report request, no waiting for the data team. Ask Q across your live EHSQ operating system and get answers from source records you can stand behind.',
     useCase: {
-      title: 'The answer exists. Getting it shouldn’t take a week.',
-      problem: 'A client asks for your near-miss trend on their project. The MD wants to know which sites drove last month’s incident spike. Each question kicks off the same dance: find the right report, or the right person, or export to Excel and build it yourself. The data was there all along — locked behind the skill of extracting it.',
-      solution: 'Q removes the dance. Ask in plain English and Q queries your live data directly: filters, aggregates, compares, and answers in seconds — with the source records cited and linked so you can stand behind every number. Follow up, drill down, change the question. It’s a conversation, not a report request.'
+      title: 'The answer exists. Getting it should not take a week.',
+      problem: 'A client asks for a trend. The MD asks which site drove last month’s spike. A project lead asks what actions are blocking permit approval. The data exists — but extracting it usually becomes work.',
+      solution: 'Q removes the extraction layer. Ask naturally, drill down and follow up. The answer is drawn from live records, with the evidence attached.'
     },
     how: [
-      ['You ask naturally', '"Top three open risks on Riverside?" — "How did observation rates change after the toolbox talks?" — "Show me overdue actions by owner."'],
-      ['Q queries live data', 'Not a cached dashboard — the answer reflects the record that was logged four minutes ago.'],
-      ['Q shows its evidence', 'Every answer links the underlying records. Numbers you can defend in front of a client or a regulator.'],
-      ['You go deeper', 'Follow-up questions keep context. Drill from portfolio to project to record without leaving the conversation.']
+      ['You ask naturally', '"Top three open risks on Riverside?" "Which contractors have expiring insurance?" "Show overdue actions by owner."'],
+      ['Q queries live data', 'Not a cached dashboard. The answer reflects current records.'],
+      ['Q shows its evidence', 'Every answer links underlying records.'],
+      ['You go deeper', 'Follow-up questions keep context from portfolio to project to record.']
     ],
     benefits: [
-      ['🚀', 'Seconds, not cycles', 'The answer that took a week of report-requesting now takes one sentence.'],
-      ['🔓', 'Everyone gets data superpowers', 'Your best insights stop being gated on Excel skills or BI licences.'],
-      ['🧾', 'Evidence built in', 'Cited sources on every answer mean trust by default — internally and with clients.']
+      ['🚀', 'Seconds, not cycles', 'The answer that took a week now takes one sentence.'],
+      ['🔓', 'Everyone gets data superpowers', 'Insights stop being gated by Excel or BI skills.'],
+      ['🧾', 'Evidence built in', 'Source-linked answers create trust internally and externally.']
     ],
-    stats: [['5', 's', 'typical time to an evidenced answer'], ['0', '', 'query languages to learn'], ['100', '%', 'of answers cite their sources']],
+    stats: [['5', 's', 'typical time to an evidenced answer'], ['0', '', 'query languages to learn'], ['100', '%', 'answers cite their sources']],
     feed: [
       ['info', 'you', 'Top 3 open risks on Riverside?'],
       ['info', 'Q', '1. Work at height (4 actions open)…'],
       ['info', 'Q', '2. LOLER cert expiry · 3. Access control'],
       ['ok', '✓', 'Sources: 7 records linked']
     ],
-    related: ['board-reporting', 'briefings', 'risk-scoring']
+    related: [
+      ['board-reporting', 'Turns answers into repeatable reporting.'],
+      ['briefings', 'Pushes critical answers before anyone asks.'],
+      ['risk-scoring', 'Explains risk movement with source records.']
+    ],
+    cta: ['See Q answer anything<br><span class="grad-text">from your own data.</span>', 'Bring the questions your team asks every month. Watch Q answer them live.']
   },
   {
     slug: 'action-chasing', n: '09', color: 'c-teal', icon: '📌',
     short: 'Q chases the actions',
     title: 'Q chases the actions',
     headline: 'The loop closes itself now.',
-    tagline: 'Automated action follow-up',
-    card: 'Q watches every corrective action, nudges owners before deadlines slip and escalates the ones that matter — so closing the loop no longer depends on someone’s memory.',
-    heroSub: 'Every audit finding, observation and incident produces actions — and every unclosed action is a known risk left live. Q watches all of them, nudges before deadlines slip, and escalates the ones that matter.',
+    tagline: 'Action follow-up',
+    eyebrowOverride: 'Automated action follow-up',
+    meta: 'Q chases actions across the full Onos operating system — audits, observations, incidents, RAMS, permits, assets, quality and environmental records.',
+    card: 'Q monitors every corrective and preventive action across every module, nudging owners before deadlines slip and escalating high-risk gaps.',
+    indexBlurb: 'Nudges owners, escalates high-risk gaps and reports closure trends.',
+    heroSub: 'Every open action is a known risk left live. Q watches the whole backlog across every module, nudges before deadlines slip and escalates what matters.',
     useCase: {
       title: 'An open action is a risk you already know about',
-      problem: 'The system said "action assigned" and everyone moved on. Three months later the audit finds the same guard rail still missing — the action sat open, its owner busy, its deadline quietly passing. Chasing actions is nobody’s favourite job, so it becomes nobody’s job.',
-      solution: 'It’s Q’s job now. Q monitors every open action against its deadline and its risk level. Owners get a nudge before the due date, not a reprimand after. Stalled high-risk actions escalate automatically to the right manager. And leadership sees closure rates moving — because the loop finally closes by default.'
+      problem: 'The system says action assigned and everyone moves on. Months later, the same issue appears in an audit or incident. Chasing actions is nobody’s favourite job, so it becomes nobody’s job.',
+      solution: 'It is Q’s job now. Q monitors deadlines, evidence, risk level, source module and owner performance — then follows up proportionately.'
     },
     how: [
-      ['Q watches the whole backlog', 'Every action from every source — audits, observations, incidents, RAMS reviews — in one monitored stream.'],
-      ['Q nudges before, not after', 'Owners hear from Q ahead of the deadline, with the context attached. Most actions close on a friendly nudge.'],
-      ['Q escalates by risk', 'A slipping high-severity action escalates to the owner’s manager automatically. Low-risk admin doesn’t generate noise.'],
-      ['Q reports the trend', 'Closure rates, ageing profiles and repeat offenders — visible to leadership without anyone compiling a thing.']
+      ['Q watches the whole backlog', 'Actions from audits, observations, incidents, RAMS, permits, assets, environmental and quality.'],
+      ['Q nudges before, not after', 'Owners hear before the deadline with context attached.'],
+      ['Q escalates by risk', 'High-severity slippage escalates. Low-risk admin does not create noise.'],
+      ['Q reports the trend', 'Closure rates, ageing profiles and repeat blockers visible without compilation.']
     ],
     benefits: [
       ['✅', 'Closure becomes the default', 'The system that never forgets beats the spreadsheet that always does.'],
-      ['🔕', 'Nudge fatigue, solved', 'Risk-proportionate escalation means people hear about what matters — and only what matters.'],
-      ['📉', 'A shrinking backlog you can prove', 'Watch the ageing curve bend in the dashboard, and show the auditor a closed loop.']
+      ['🔕', 'Nudge fatigue solved', 'People hear about what matters.'],
+      ['📉', 'A shrinking backlog you can prove', 'The ageing curve bends and the evidence is there.']
     ],
     stats: [['312', '', 'open actions monitored at once'], ['48', 'h', 'advance nudge before every deadline'], ['0', '', 'high-risk actions forgotten']],
     feed: [
@@ -295,105 +360,134 @@ export const SUPERPOWERS = [
       ['warn', '⚠', '2 high-risk overdue — escalated'],
       ['ok', '✓', 'Weekly closure rate: 94% (+6)']
     ],
-    related: ['risk-scoring', 'compliance', 'briefings']
+    related: [
+      ['risk-scoring', 'Open actions become live risk drivers.'],
+      ['compliance', 'Actions close evidence gaps.'],
+      ['briefings', 'Today’s overdue actions become today’s priorities.']
+    ],
+    cta: ['See Q chase your actions<br><span class="grad-text">from your own backlog.</span>', 'Bring an action tracker. We will show how Q turns it into a live closure system.']
   },
   {
     slug: 'competency', n: '10', color: 'c-onos', icon: '🎓',
     short: 'Q watches competency',
     title: 'Q watches competency',
     headline: 'Right ticket. Right person. Right job.',
-    tagline: 'Training & competency assurance',
-    card: 'Q tracks every ticket, card and certificate across your workforce — flagging expiring competencies before someone unqualified ends up on the tools.',
-    heroSub: 'Q tracks every ticket, card and certificate across your direct workforce and supply chain — cross-references them against the work actually being done — and flags the gap before it’s a person on the tools without the ticket.',
+    tagline: 'Competency assurance',
+    eyebrowOverride: 'Training and competency assurance',
+    meta: 'Q watches competency across workers, subcontractors, tickets, certificates, inductions, training, permits and sign-ins.',
+    card: 'Q tracks tickets, cards, certificates, inductions and training records — cross-checking them against permits, sign-ins and live work before someone unqualified ends up on the tools.',
+    indexBlurb: 'Cross-checks training, tickets and certificates against live work, permits and access.',
+    heroSub: 'Q tracks tickets, cards, certificates, inductions and training across your workforce and supply chain — then checks them against the work actually being done.',
     useCase: {
-      title: 'Competency expires quietly. Consequences don’t.',
-      problem: 'A thousand training records. CPCS cards, first-aid certs, fork-lift licences, asbestos awareness — each on its own expiry clock. The spreadsheet tracking them is out of date the day it’s saved, and the gap gets discovered the hard way: an unqualified operator, an invalidated insurance position, an audit finding.',
-      solution: 'Q watches every clock. It flags expiring competencies weeks ahead, requests refresher bookings automatically, and — because it also sees sign-ins and permits — cross-checks that the people on today’s task actually hold today’s required tickets. The competency matrix stops being a document and becomes a live guarantee.'
+      title: 'Competency expires quietly. Consequences do not.',
+      problem: 'A training matrix can look fine until a lapsed ticket appears at the gate, on a permit, in an audit or after an incident. The problem is not the record; it is whether the system uses the record.',
+      solution: 'Q uses it. It cross-checks competencies against sign-ins, permits, roles, contractor records and tasks — catching gaps before work starts.'
     },
     how: [
-      ['Q holds the matrix live', 'Every worker, every credential, every expiry — direct employees and subcontractor operatives alike.'],
-      ['Q looks ahead', 'Expiries flagged 30+ days out, refreshers requested automatically, bookings tracked to completion.'],
-      ['Q cross-checks reality', 'Sign-in data and permit requirements checked against live competencies. The gap is caught at the gate, not in the investigation.'],
-      ['Q evidences it all', 'Training coverage per ISO clause, per client requirement, per site — ready for any audit or PQQ.']
+      ['Q holds the matrix live', 'Every worker, credential and expiry across direct employees and subcontractors.'],
+      ['Q looks ahead', 'Expiries flagged early, refresher requests triggered and bookings tracked.'],
+      ['Q cross-checks reality', 'Sign-in and permit requirements checked against live competencies.'],
+      ['Q evidences it all', 'Coverage by role, site, client requirement and ISO clause.']
     ],
     benefits: [
-      ['🪪', 'No expired tickets on the tools', 'The cross-check between competency and actual work assignment is the control most systems are missing.'],
-      ['📚', 'Renewals run themselves', 'Refresher chasing happens automatically, weeks ahead, every time.'],
-      ['🧾', 'Instant evidence', 'Client asks for your training matrix? It’s current, by definition, today.']
+      ['🪪', 'No expired tickets on the tools', 'The gap is caught before access or permit issue.'],
+      ['📚', 'Renewals run themselves', 'Refresher chasing happens automatically.'],
+      ['🧾', 'Instant evidence', 'The current matrix is always ready.']
     ],
-    stats: [['1042', '', 'training records under live watch'], ['30', ' days', 'minimum advance expiry warning'], ['100', '%', 'of permits checked against tickets']],
+    stats: [['1042', '', 'training records under live watch'], ['30', ' days', 'minimum advance expiry warning'], ['100', '%', 'permits checked against tickets']],
     feed: [
       ['info', 'check', '1,042 training records scanned'],
       ['warn', '⚠', '6 CPCS cards expire this month'],
       ['warn', '⚠', 'PTW-204 requires confined-space — 1 gap'],
       ['ok', '✓', 'Refresher bookings requested']
     ],
-    related: ['supply-chain', 'compliance', 'incident-triage']
+    related: [
+      ['supply-chain', 'Contractor records connect to worker competency.'],
+      ['compliance', 'Training evidence stays mapped.'],
+      ['incident-triage', 'Competency context joins the investigation.']
+    ],
+    cta: ['See Q watch competency<br><span class="grad-text">on your matrix.</span>', 'Bring your training matrix and permit requirements. We will show the live cross-check.']
   },
   {
     slug: 'environmental', n: '11', color: 'c-cyan', icon: '🌍',
     short: 'Q tracks your footprint',
     title: 'Q tracks your footprint',
     headline: 'Sustainability you can stand behind.',
-    tagline: 'Environmental & carbon intelligence',
-    card: 'Q pulls environmental data from across your projects — waste, water, energy, carbon — and turns it into sustainability reporting you can actually stand behind.',
-    heroSub: 'Q aggregates the environmental data your sites already produce — waste transfers, energy use, water, fuel, site returns — and turns it into carbon and sustainability reporting that survives scrutiny.',
+    tagline: 'Environmental intelligence',
+    eyebrowOverride: 'Environmental and carbon intelligence',
+    meta: 'Q tracks environmental performance across waste, water, fuel, electricity, transport, carbon, site returns and incidents in the Onos operating system.',
+    card: 'Q reads site returns, fuel, waste, water, energy and carbon data continuously — turning environmental records into traceable sustainability reporting.',
+    indexBlurb: 'Aggregates environmental data continuously and flags anomalies in-month.',
+    heroSub: 'Q reads the environmental data your operation already produces — waste, water, fuel, electricity, transport, site returns and incidents — and turns it into traceable sustainability reporting.',
     useCase: {
-      title: 'ESG reporting that isn’t an annual estimate',
-      problem: 'The sustainability report is due, and the inputs are a folder of waste transfer notes, a stack of fuel receipts and a dozen site returns in different formats. The carbon number gets built once a year, by hand, with assumptions nobody can fully trace — exactly when clients and regulators are starting to check.',
-      solution: 'Q builds the number continuously, from source. Site returns, waste documentation, energy and fuel data flow into one model as they’re logged. Anomalies — the site whose diesel use jumped 12% — surface in-month, when you can act, not in the annual write-up. And every figure in the report traces back to its source records.'
+      title: 'ESG reporting that is not an annual estimate',
+      problem: 'The sustainability report should not be built once a year from receipts, assumptions and inconsistent returns. Environmental performance should be managed while it is happening.',
+      solution: 'Q builds the picture continuously from source records. Anomalies surface in-month, and every figure in the report traces back to evidence.'
     },
     how: [
-      ['Q aggregates from source', 'Waste, water, energy, fuel and materials data captured in normal site workflows — no separate ESG data collection exercise.'],
-      ['Q normalises and converts', 'Units, emission factors and intensity metrics handled consistently across every site and reporting period.'],
-      ['Q flags anomalies live', 'Consumption spikes and waste-stream changes surface when they happen — so they’re managed, not just reported.'],
-      ['Q drafts the disclosure', 'Period reports with full traceability from headline number to source record — ready for clients, auditors and tenders.']
+      ['Q aggregates from source', 'Waste, water, fuel, electricity, transport and materials data captured through normal workflows.'],
+      ['Q normalises and converts', 'Units, emission factors and intensity metrics handled consistently.'],
+      ['Q flags anomalies live', 'Consumption spikes and waste-stream changes surface when they can still be managed.'],
+      ['Q drafts the disclosure', 'Period reports with full traceability from headline number to source record.']
     ],
     benefits: [
-      ['🌱', 'In-month, not year-end', 'Environmental performance becomes something you manage, not something you confess annually.'],
-      ['🔗', 'Traceable to source', 'Every reported tonne and kilowatt links to its records. Greenwash-proof by construction.'],
-      ['🏆', 'Tender-ready credentials', 'Live sustainability data is increasingly the differentiator in PQQs. You’ll have it.']
+      ['🌱', 'In-month, not year-end', 'Environmental performance becomes something you manage, not confess.'],
+      ['🔗', 'Traceable to source', 'Every tonne and kilowatt links to records.'],
+      ['🏆', 'Tender-ready credentials', 'Live sustainability data becomes a stronger PQQ answer.']
     ],
-    stats: [['12', '%', 'anomalies like this caught in-month'], ['100', '%', 'of figures traceable to source'], ['1', '', 'continuous model — no annual scramble']],
+    stats: [['12', '%', 'anomalies caught in-month'], ['100', '%', 'figures traceable to source'], ['1', '', 'continuous model — no annual scramble']],
     feed: [
       ['info', 'env', 'Aggregating Q2 site returns…'],
       ['warn', '⚠', 'Diesel use up 12% on Site 3'],
       ['info', '↳', 'Likely driver: generator runtime +40h'],
       ['ok', '✓', 'Carbon summary ready for review']
     ],
-    related: ['board-reporting', 'compliance', 'ask-q']
+    related: [
+      ['board-reporting', 'Environmental movement joins the performance story.'],
+      ['compliance', 'Environmental records map to standards.'],
+      ['ask-q', 'Ask environmental questions in plain English.']
+    ],
+    cta: ['See Q track your footprint<br><span class="grad-text">on your data.</span>', 'Bring a site return, fuel report or waste dataset. Watch Q turn it into traceable insight.']
   },
   {
     slug: 'board-reporting', n: '12', color: 'c-pink', icon: '📊',
     short: 'Q writes the board pack',
     title: 'Q writes the board pack',
     headline: 'The month’s story, told in minutes.',
-    tagline: 'Automated performance reporting',
-    card: 'Q compiles your monthly performance story — trends, leading indicators, the wins and the risks — in minutes, in your house style, ready for the boardroom.',
-    heroSub: 'The monthly EHSQ report — trends, leading indicators, narrative and all — drafted by Q in minutes from live data, in your house style, ready for your review and the boardroom.',
+    tagline: 'Board-ready reporting',
+    eyebrowOverride: 'Automated performance reporting',
+    meta: 'Q drafts board packs and performance reports from the full Onos EHSQ operating record — incidents, observations, actions, audits, training, environmental and quality data.',
+    card: 'Q turns live module data into the monthly performance story — trends, leading indicators, exceptions and risks — ready for review.',
+    indexBlurb: 'Drafts the month’s performance story from live EHSQ records.',
+    heroSub: 'The monthly EHSQ report — trends, leading indicators, narrative, exceptions and evidence — drafted by Q from live operating data, ready for human review.',
     useCase: {
       title: 'Two days a month, returned to actual safety work',
-      problem: 'Every month-end, your most senior EHSQ people stop doing safety and start doing PowerPoint: exporting charts, reconciling numbers, writing the same narrative structure around new data. Two days of expert time, twelve times a year, producing a document that’s out of date before it’s presented.',
-      solution: 'Q drafts it. It compiles the month’s data into your report structure, generates the charts, writes the first-draft narrative — what improved, what deteriorated, what needs board attention — and flags the anomalies worth a human paragraph. You review, sharpen the judgement calls, and present. Two days becomes one hour.'
+      problem: 'Month-end reporting pulls senior EHSQ people into exports, charts, screenshots and narrative drafting. The report is often out of date before it reaches the meeting.',
+      solution: 'Q drafts it from live data. Incidents, observations, actions, audits, training, environmental, quality and site returns become one performance story. Your experts add judgement, not formatting.'
     },
     how: [
-      ['Q compiles the month', 'Incidents, observations, actions, audits, training, environmental — aggregated and trended automatically at period end.'],
-      ['Q writes the first draft', 'A narrative in your house structure: headline performance, movements, leading indicators, exceptions needing decision.'],
-      ['You add the judgement', 'Q drafts; you decide. The expert’s hour goes on insight and recommendation, not chart formatting.'],
-      ['The board gets better answers', 'Live-data appendices and Q’s ask-anything follow-up mean "good question, I’ll find out" becomes "here’s the answer."']
+      ['Q compiles the month', 'Every relevant module aggregated and trended.'],
+      ['Q writes the first draft', 'Performance narrative, movements, leading indicators and exceptions.'],
+      ['You add judgement', 'Humans decide the meaning and recommendations.'],
+      ['The board gets better answers', 'Source-linked appendices and Q follow-up reduce "we will come back to you" moments.']
     ],
     benefits: [
-      ['⏳', '2 days → 1 hour', 'Month-end reporting compressed to a review-and-approve task.'],
-      ['📊', 'Consistent and current', 'Same structure every month, numbers from live data — comparable, trustworthy, never stale.'],
-      ['🧠', 'Experts do expert work', 'Your most experienced people spend month-end on prevention strategy, not slide alignment.']
+      ['⏳', 'Days become an hour', 'Month-end reporting becomes review and approval.'],
+      ['📊', 'Consistent and current', 'Same structure, live numbers, comparable month to month.'],
+      ['🧠', 'Experts do expert work', 'Senior time moves from slide alignment to prevention strategy.']
     ],
-    stats: [['14', '', 'charts generated automatically'], ['1', ' hr', 'of human time per board pack'], ['12', '×', 'a year, every year, on time']],
+    stats: [['14', '', 'charts generated automatically'], ['1', ' hr', 'human time per board pack'], ['12', '×', 'a year, every year, on time']],
     feed: [
       ['info', 'report', 'May EHSQ report drafted'],
       ['info', '↳', '14 charts, 6 insights, 3 alerts'],
       ['warn', '⚠', 'Flag: action closure dipped wk 3'],
       ['ok', '✓', 'Sent to Director for sign-off']
     ],
-    related: ['ask-q', 'briefings', 'environmental']
+    related: [
+      ['ask-q', 'The board’s follow-up questions can be answered from source records.'],
+      ['briefings', 'The monthly story starts with daily operating signals.'],
+      ['environmental', 'Environmental data joins the board story.']
+    ],
+    cta: ['See Q write the board pack<br><span class="grad-text">from your own data.</span>', 'Bring last month’s report. Watch Q draft the next one.']
   }
 ];
