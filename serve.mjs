@@ -1,11 +1,11 @@
-// Zero-dependency static server. Honors PORT (v0/Vercel previews) — defaults to 8741 locally.
+// Zero-dependency static server. Honors PORT; defaults to 3000, which v0's preview proxy probes.
 import { createServer } from 'node:http';
 import { readFile } from 'node:fs/promises';
 import { extname, join, normalize } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const ROOT = fileURLToPath(new URL('.', import.meta.url));
-const PORT = Number(process.env.PORT) || 8741;
+const PORT = Number(process.env.PORT) || 3000;
 
 const MIME = {
   '.html': 'text/html; charset=utf-8',

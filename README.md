@@ -13,7 +13,7 @@ Marketing site concept for [onos.app](https://onos.app): safety, sustainability,
 
 ```sh
 npm run build   # regenerate all pages from data files
-npm run dev     # serve locally on http://localhost:8741
+npm run dev     # serve locally on http://localhost:3000 (set PORT to override)
 ```
 
 Edit content in `data/superpowers.mjs`, `data/products.mjs`, `data/industries.mjs` or templates in `build.mjs`, then rebuild. Don't hand-edit generated HTML. Bump `ASSET_V` in `build.mjs` when changing CSS/JS so browser caches refresh.
