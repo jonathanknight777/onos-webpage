@@ -1,0 +1,11 @@
+{
+  "name": "onos-webpage",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Onos marketing site — the EHSQ intelligence platform, powered by Onos Q",
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "dev": "python3 -m http.server 8741"
+  }
+}
