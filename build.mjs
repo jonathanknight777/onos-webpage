@@ -8,7 +8,7 @@ import { INDUSTRIES } from './data/industries.mjs';
 const ROOT = dirname(fileURLToPath(import.meta.url));
 const DEMO = 'https://cal.com/onostech/web-intro';
 // Bump on any assets/site.css|js change — busts browser caches on rebuild.
-const ASSET_V = '7';
+const ASSET_V = '8';
 
 const sp = slug => SUPERPOWERS.find(s => s.slug === slug);
 const prod = slug => PRODUCTS.find(p => p.slug === slug);
@@ -71,6 +71,7 @@ function layout({ depth = 0, title, desc, active = '', body, landing = false }) 
 <div class="scroll-progress" id="scrollProgress"></div>
 ${nav(p, active)}
 ${body}
+${landing ? '' : trustStrip(p)}
 ${footer(p)}
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
@@ -92,6 +93,17 @@ function qCard(s, p, { feed = true } = {}) {
   ${feed ? feedHtml(s.feed.slice(0, 3)) : ''}
   <a class="more" href="${p}q/${s.slug}.html">Explore this superpower <span class="arrow">→</span></a>
 </div>`;
+}
+
+const LOGO_FILES = ['graham', 'mcavoy', 'almac', 'kilwaughter', 'crown', 'neilcott', 'bretland', 'irwin', 'floorform', 'msm', 'suir', 'mowlem', 'martin'];
+function trustStrip(p) {
+  const half = LOGO_FILES.map(l => `<span class="tl"><img src="${p}assets/img/logos/${l}.png" alt="${l}" loading="lazy"></span>`).join('');
+  return `<section class="trust-strip">
+  <div class="label">Trusted by the teams that build, make and move the UK &amp; Ireland</div>
+  <div class="marquee" style="--marq-speed:38s">
+    <div class="marquee-inner"><div class="m-half trust-logos">${half}</div><div class="m-half trust-logos">${half}</div></div>
+  </div>
+</section>`;
 }
 
 const ctaBox = (h, sub, note) => `<section class="cta">
@@ -145,8 +157,6 @@ const INDUSTRY_IMG = {
 /* ---------------- landing page ---------------- */
 function landingPage() {
   const p = '';
-  const logoFiles = ['graham', 'mcavoy', 'almac', 'kilwaughter', 'crown', 'neilcott', 'bretland', 'irwin', 'floorform', 'msm', 'suir', 'mowlem', 'martin'];
-  const trustHalf = logoFiles.map(l => `<span class="tl"><img src="assets/img/logos/${l}.png" alt="${l}" loading="lazy"></span>`).join('');
   const pillRow = (mods) => mods.map(m => `<a class="module-pill" href="products/${m.slug}.html"><span class="dot"></span>${m.name}</a>`).join('');
   const featured = ['safety-observations', 'incident-management', 'permits', 'supply-chain', 'audits-inspections', 'dashboard-reporting'].map(prod);
   const body = `
@@ -173,12 +183,7 @@ function landingPage() {
   <div class="scroll-hint"><div class="wheel"></div>Scroll</div>
 </section>
 
-<section class="trust-strip">
-  <div class="label">Trusted by the teams that build, make and move the UK &amp; Ireland</div>
-  <div class="marquee" style="--marq-speed:38s">
-    <div class="marquee-inner"><div class="m-half trust-logos">${trustHalf}</div><div class="m-half trust-logos">${trustHalf}</div></div>
-  </div>
-</section>
+${trustStrip(p)}
 
 <section class="problem section-pad">
   <div class="container">

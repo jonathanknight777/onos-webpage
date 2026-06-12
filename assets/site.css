@@ -1218,10 +1218,13 @@ footer.site-footer {
 .trust-logos { display: flex; align-items: center; }
 .trust-logos .tl {
   padding: 0 34px;
-  display: flex; align-items: center;
+  display: flex; align-items: center; justify-content: center;
+  height: 48px; min-width: 120px;
 }
 .trust-logos img {
-  height: 30px; width: auto; display: block;
+  max-height: 30px; max-width: 132px;
+  width: auto; height: auto; display: block;
+  object-fit: contain;
   filter: grayscale(1) brightness(3.2);
   opacity: 0.5;
   transition: filter .35s, opacity .35s;
