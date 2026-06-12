@@ -96,11 +96,16 @@ if (document.querySelector('.page-hero')) {
 
   const LINK = 140 * devicePixelRatio;
   let heroVisible = true;
-  new IntersectionObserver(([e]) => heroVisible = e.isIntersecting).observe(canvas);
+  new IntersectionObserver(([e]) => heroVisible = e.isIntersecting || e.intersectionRatio > 0).observe(canvas);
 
-  function frame() {
-    requestAnimationFrame(frame);
+  // Sandboxed preview iframes (e.g. v0) can throttle or suspend rAF, freezing the
+  // canvas after the first paint. Draw via rAF when available, but let a watchdog
+  // interval keep the simulation moving whenever rAF stalls.
+  let lastDraw = 0;
+  function draw(now) {
     if (!heroVisible || reduceMotion) return;
+    if (w === 0 || h === 0) resize();
+    lastDraw = now;
     ctx.clearRect(0, 0, w, h);
     for (const p of particles) {
       const dx = mouse.x - p.x, dy = mouse.y - p.y;
@@ -132,7 +137,16 @@ if (document.querySelector('.page-hero')) {
       }
     }
   }
+  function frame() {
+    requestAnimationFrame(frame);
+    draw(performance.now());
+  }
   frame();
+  setInterval(() => {
+    if (!reduceMotion && document.visibilityState !== 'hidden' && performance.now() - lastDraw > 250) {
+      draw(performance.now());
+    }
+  }, 50);
 })();
 
 /* ---------- counters ---------- */

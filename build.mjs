@@ -8,7 +8,7 @@ import { INDUSTRIES } from './data/industries.mjs';
 const ROOT = dirname(fileURLToPath(import.meta.url));
 const DEMO = 'https://cal.com/onostech/web-intro';
 // Bump on any assets/site.css|js change — busts browser caches on rebuild.
-const ASSET_V = '8';
+const ASSET_V = '9';
 
 const sp = slug => SUPERPOWERS.find(s => s.slug === slug);
 const prod = slug => PRODUCTS.find(p => p.slug === slug);
